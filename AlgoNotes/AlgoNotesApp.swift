@@ -11,7 +11,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct MyApp: App {
   @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-  
+
   var body: some Scene {
     WindowGroup {
       RootView()

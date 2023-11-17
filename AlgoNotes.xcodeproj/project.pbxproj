@@ -39,6 +39,7 @@
 		10CA8D5D2B06AB89007DC801 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 10CA8D5C2B06AB89007DC801 /* FirebaseStorage */; };
 		10CA8D5F2B06AB89007DC801 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 10CA8D5E2B06AB89007DC801 /* FirebaseStorageCombine-Community */; };
 		10CA8D622B06E189007DC801 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CA8D612B06E189007DC801 /* RootView.swift */; };
+		10CA8D642B06E88D007DC801 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CA8D632B06E88D007DC801 /* AuthView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		10CA8D202B06AA51007DC801 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		10CA8D272B06AB05007DC801 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		10CA8D612B06E189007DC801 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		10CA8D632B06E88D007DC801 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				10CA8D612B06E189007DC801 /* RootView.swift */,
+				10CA8D632B06E88D007DC801 /* AuthView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			files = (
 				10CA8D622B06E189007DC801 /* RootView.swift in Sources */,
 				10CA8D192B06AA50007DC801 /* AlgoNotesApp.swift in Sources */,
+				10CA8D642B06E88D007DC801 /* AuthView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,7 +391,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.algonquincollege.AlgoNotes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.algonquincollege.algonotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -425,7 +429,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.algonquincollege.AlgoNotes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.algonquincollege.algonotes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
