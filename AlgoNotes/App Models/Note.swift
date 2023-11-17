@@ -14,4 +14,8 @@ class Note: Identifiable {
     self.title = title
     self.text = text
   }
+  
+  convenience init() {
+    self.init(title: "", text: "")
+  }
 }

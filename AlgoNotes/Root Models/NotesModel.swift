@@ -38,8 +38,8 @@ class NotesModel: ObservableObject {
     }
   }
   
-  func addNote(note: Note){
-    let ref = notesCollectionRef.document(note.title)
+  func saveNote(note: Note){
+    let ref = notesCollectionRef.document(note.id)
     
     ref.setData(
       [
@@ -52,7 +52,9 @@ class NotesModel: ObservableObject {
       if let error = error {
         print(error.localizedDescription)
       } else {
-        self.notes.append(note)
+        if !self.notes.contains(where: { $0.id == note.id }) {
+          self.notes.append(note)
+        }
       }
     }
   }

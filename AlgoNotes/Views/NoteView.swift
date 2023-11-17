@@ -20,11 +20,10 @@ struct NoteView: View {
           )
           .padding()
       }
-      .navigationTitle("New")
       .toolbar {
         ToolbarItem {
           Button("Save") {
-            model.addNote(note: note)
+            model.saveNote(note: note)
             dismissMe()
           }
         }
