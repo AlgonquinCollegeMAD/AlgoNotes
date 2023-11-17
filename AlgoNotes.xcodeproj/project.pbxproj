@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		104053442B06F10700EFEE20 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104053432B06F10700EFEE20 /* Note.swift */; };
+		104053462B06F15600EFEE20 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104053452B06F15600EFEE20 /* NoteView.swift */; };
+		104053482B06F7CE00EFEE20 /* NotesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104053472B06F7CE00EFEE20 /* NotesListView.swift */; };
+		1040534A2B06F86300EFEE20 /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104053492B06F86300EFEE20 /* NotesModel.swift */; };
 		10CA8D192B06AA50007DC801 /* AlgoNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CA8D182B06AA50007DC801 /* AlgoNotesApp.swift */; };
 		10CA8D1D2B06AA51007DC801 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10CA8D1C2B06AA51007DC801 /* Assets.xcassets */; };
 		10CA8D212B06AA51007DC801 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10CA8D202B06AA51007DC801 /* Preview Assets.xcassets */; };
@@ -43,6 +47,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		104053432B06F10700EFEE20 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		104053452B06F15600EFEE20 /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		104053472B06F7CE00EFEE20 /* NotesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListView.swift; sourceTree = "<group>"; };
+		104053492B06F86300EFEE20 /* NotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
 		10CA8D152B06AA50007DC801 /* AlgoNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlgoNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10CA8D182B06AA50007DC801 /* AlgoNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoNotesApp.swift; sourceTree = "<group>"; };
 		10CA8D1C2B06AA51007DC801 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +99,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		104053422B06F0DF00EFEE20 /* App Models */ = {
+			isa = PBXGroup;
+			children = (
+				104053432B06F10700EFEE20 /* Note.swift */,
+			);
+			path = "App Models";
+			sourceTree = "<group>";
+		};
+		1040534B2B06F87D00EFEE20 /* Root Models */ = {
+			isa = PBXGroup;
+			children = (
+				104053492B06F86300EFEE20 /* NotesModel.swift */,
+			);
+			path = "Root Models";
+			sourceTree = "<group>";
+		};
 		10CA8D0C2B06AA50007DC801 = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +136,8 @@
 			children = (
 				10CA8D182B06AA50007DC801 /* AlgoNotesApp.swift */,
 				10CA8D602B06C35D007DC801 /* Views */,
+				104053422B06F0DF00EFEE20 /* App Models */,
+				1040534B2B06F87D00EFEE20 /* Root Models */,
 				10CA8D1C2B06AA51007DC801 /* Assets.xcassets */,
 				10CA8D1E2B06AA51007DC801 /* AlgoNotes.entitlements */,
 				10CA8D272B06AB05007DC801 /* GoogleService-Info.plist */,
@@ -133,6 +159,8 @@
 			children = (
 				10CA8D612B06E189007DC801 /* RootView.swift */,
 				10CA8D632B06E88D007DC801 /* AuthView.swift */,
+				104053472B06F7CE00EFEE20 /* NotesListView.swift */,
+				104053452B06F15600EFEE20 /* NoteView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,8 +268,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				104053442B06F10700EFEE20 /* Note.swift in Sources */,
+				104053462B06F15600EFEE20 /* NoteView.swift in Sources */,
 				10CA8D622B06E189007DC801 /* RootView.swift in Sources */,
+				1040534A2B06F86300EFEE20 /* NotesModel.swift in Sources */,
 				10CA8D192B06AA50007DC801 /* AlgoNotesApp.swift in Sources */,
+				104053482B06F7CE00EFEE20 /* NotesListView.swift in Sources */,
 				10CA8D642B06E88D007DC801 /* AuthView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

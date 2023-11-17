@@ -7,7 +7,7 @@ struct RootView: View {
   var body: some View {
     NavigationView {
       if isUserLoggedIn {
-        Text("List of all notes")
+        NotesListView()
       } else {
         AuthView()
       }
