@@ -4,7 +4,7 @@ import Firebase
 struct NotesListView: View {
   @EnvironmentObject var model: NotesModel
   @State var showAddNewNoteView = false
-  @State var note = Note()
+  @State var note: Note? = nil
   
   var body: some View {
     List(model.notes, id: \.id) { note in
@@ -25,8 +25,8 @@ struct NotesListView: View {
         }
       }
     }
-    .sheet(isPresented: $showAddNewNoteView) {
-      NoteView(note: self.note)
+    .sheet(item: $note) { note in
+      NoteView(note: note)
     }
   }
 }
