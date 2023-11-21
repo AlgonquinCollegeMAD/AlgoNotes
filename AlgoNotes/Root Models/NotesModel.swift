@@ -31,6 +31,18 @@ class NotesModel: ObservableObject {
     }
   }
   
+  func delete(atOffsets: IndexSet) {
+    atOffsets.map { notes[$0] }.forEach { note in
+      notesCollectionRef.document(note.id).delete() { error in
+        if let error = error {
+          print("Error: \(error)")
+        } else {
+          print("Note deleted")
+        }
+      }
+    }
+  }
+  
   func saveNote(note: Note){
     let ref = notesCollectionRef.document(note.id)
     

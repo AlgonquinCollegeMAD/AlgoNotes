@@ -7,13 +7,19 @@ struct NotesListView: View {
   @State var note: Note? = nil
   
   var body: some View {
-    List(model.notes, id: \.id) { note in
-      Text(note.title)
-        .onTapGesture {
-          self.note = note
-          showAddNewNoteView.toggle()
-        }
+    List {
+      ForEach(model.notes, id: \.id) { note in
+        Text(note.title)
+          .onTapGesture {
+            self.note = note
+            showAddNewNoteView.toggle()
+          }
+      }
+      .onDelete(perform: { indexSet in
+        model.delete(atOffsets: indexSet)
+      })
     }
+
     .navigationTitle("Notes")
     .toolbar {
       ToolbarItem {
