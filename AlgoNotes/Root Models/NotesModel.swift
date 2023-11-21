@@ -6,34 +6,27 @@ class NotesModel: ObservableObject {
   private let notesCollectionRef = Firestore.firestore().collection("Notes")
   
   init() {
-    fetchAllNotes()
+    startListening()
   }
   
-  func fetchAllNotes() {
-    self.notes.removeAll()
-    notesCollectionRef.getDocuments {
-      snapshot,
-      error in
-      guard error == nil else {
-        print(error?.localizedDescription as Any)
+  func startListening() {
+    notesCollectionRef.addSnapshotListener { (snapshot, error) in
+      guard let documents = snapshot?.documents else {
+        print("No notes")
         return
       }
       
-      if let snapshot = snapshot {
-        for document in snapshot.documents {
-          let data = document.data()
-          
-          let id = data["id"] as? String ?? ""
-          let title = data["title"] as? String ?? ""
-          let text = data["text"] as? String ?? ""
-          
-          let note = Note(
-            id: id,
-            title: title,
-            text: text
-          )
-          self.notes.append(note)
-        }
+      self.notes = documents.map { snapshot -> Note in
+        let data = snapshot.data()
+        let id = data["id"] as? String ?? ""
+        let title = data["title"] as? String ?? ""
+        let text = data["text"] as? String ?? ""
+        
+        return Note(
+          id: id,
+          title: title,
+          text: text
+        )
       }
     }
   }
@@ -51,10 +44,6 @@ class NotesModel: ObservableObject {
       error in
       if let error = error {
         print(error.localizedDescription)
-      } else {
-        if !self.notes.contains(where: { $0.id == note.id }) {
-          self.notes.append(note)
-        }
       }
     }
   }
