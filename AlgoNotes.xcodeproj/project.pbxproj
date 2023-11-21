@@ -11,6 +11,7 @@
 		104053462B06F15600EFEE20 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104053452B06F15600EFEE20 /* NoteView.swift */; };
 		104053482B06F7CE00EFEE20 /* NotesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104053472B06F7CE00EFEE20 /* NotesListView.swift */; };
 		1040534A2B06F86300EFEE20 /* NotesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104053492B06F86300EFEE20 /* NotesModel.swift */; };
+		104053592B0D46BA00EFEE20 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 104053582B0D46B900EFEE20 /* AuthModel.swift */; };
 		10CA8D192B06AA50007DC801 /* AlgoNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CA8D182B06AA50007DC801 /* AlgoNotesApp.swift */; };
 		10CA8D1D2B06AA51007DC801 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10CA8D1C2B06AA51007DC801 /* Assets.xcassets */; };
 		10CA8D212B06AA51007DC801 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10CA8D202B06AA51007DC801 /* Preview Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		104053452B06F15600EFEE20 /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		104053472B06F7CE00EFEE20 /* NotesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListView.swift; sourceTree = "<group>"; };
 		104053492B06F86300EFEE20 /* NotesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesModel.swift; sourceTree = "<group>"; };
+		104053582B0D46B900EFEE20 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		10CA8D152B06AA50007DC801 /* AlgoNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlgoNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10CA8D182B06AA50007DC801 /* AlgoNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgoNotesApp.swift; sourceTree = "<group>"; };
 		10CA8D1C2B06AA51007DC801 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				104053492B06F86300EFEE20 /* NotesModel.swift */,
+				104053582B0D46B900EFEE20 /* AuthModel.swift */,
 			);
 			path = "Root Models";
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				10CA8D622B06E189007DC801 /* RootView.swift in Sources */,
 				1040534A2B06F86300EFEE20 /* NotesModel.swift in Sources */,
 				10CA8D192B06AA50007DC801 /* AlgoNotesApp.swift in Sources */,
+				104053592B0D46BA00EFEE20 /* AuthModel.swift in Sources */,
 				104053482B06F7CE00EFEE20 /* NotesListView.swift in Sources */,
 				10CA8D642B06E88D007DC801 /* AuthView.swift in Sources */,
 			);

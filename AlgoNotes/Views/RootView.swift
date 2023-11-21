@@ -2,21 +2,14 @@ import SwiftUI
 import Firebase
 
 struct RootView: View {
-  @State var isUserLoggedIn = false
+  @EnvironmentObject var authModel: AuthModel
   
   var body: some View {
     NavigationView {
-      if isUserLoggedIn {
+      if authModel.isUserLoggedIn {
         NotesListView()
       } else {
         AuthView()
-      }
-    }
-    .onAppear {
-      Auth.auth().addStateDidChangeListener { auth, user in
-        if user != nil {
-          isUserLoggedIn.toggle()
-        }
       }
     }
   }

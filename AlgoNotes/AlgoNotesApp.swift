@@ -16,6 +16,7 @@ struct MyApp: App {
     WindowGroup {
       RootView()
         .environmentObject(NotesModel())
+        .environmentObject(AuthModel())
     }
   }
 }

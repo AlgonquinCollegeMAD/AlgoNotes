@@ -2,6 +2,7 @@ import SwiftUI
 import Firebase
 
 struct AuthView: View {
+  @EnvironmentObject var authModel: AuthModel
   @State var email = String()
   @State var password = String()
   
@@ -30,14 +31,14 @@ struct AuthView: View {
       // Buttons
       HStack() {
         Button(action: {
-          login()
+          authModel.login(withEmail: email, password: password)
         }) {
           Text("Login")
         }
         .padding()
         
         Button(action: {
-          signUp()
+          authModel.register(email: email, password: password)
         }){
           Text("Sign Up")
         }
@@ -45,28 +46,6 @@ struct AuthView: View {
       }
     }
     .padding()
-  }
-  
-  // Login
-  func login() {
-    Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-      if error != nil {
-        print(error?.localizedDescription ?? "")
-      } else {
-        print("Login successful")
-      }
-    }
-  }
-  
-  // SignUp
-  func signUp(){
-    Auth.auth().createUser(withEmail: email, password: password) { result, error in
-      if error != nil{
-        print(error?.localizedDescription ?? "")
-      } else {
-        print("Sign Up Successful")
-      }
-    }
   }
 }
 
